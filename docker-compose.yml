@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: llem
+    image: llem:latest
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: 4
+          memory: 8G
+    ports:
+      - "5000:5000"
