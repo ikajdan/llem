@@ -16,7 +16,7 @@ LLEM is a simple and self-contained web interface for interacting with a Large L
 - Simple prompt-based interactions where users can chat with the AI.
 - Powered by the Hugging Face transformers library for model handling.
 
-## Setup and Installation
+## Setup
 
 You can run the application using Docker or manually. The manual setup has only been tested with Python 3.12.
 
@@ -35,13 +35,13 @@ The easiest way to run the application is using Docker. This will handle all dep
 
 1. Download the model as described above.
 2. Build the image:
-    ```bash
-    docker compose build
-    ```
+  ```bash
+  docker compose build
+  ```
 3. Run the container:
-    ```bash
-    docker compose up
-    ```
+  ```bash
+  docker compose up
+  ```
 
 The app will be accessible at [http://localhost:5000](http://localhost:5000).
 
@@ -50,18 +50,18 @@ The app will be accessible at [http://localhost:5000](http://localhost:5000).
 If you prefer to run the application manually, follow steps below.
 
 1. Set up a Python virtual environment:
-    ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate
-    ```
+  ```bash
+  python3 -m venv .venv
+  source .venv/bin/activate
+  ```
 2. Install the required dependencies:
-    ```bash
-    pip install -r app/requirements.txt
-    ```
+  ```bash
+  pip install -r app/requirements.txt
+  ```
 3. Start the Flask web server:
-    ```bash
-    python app/app.py
-    ```
+  ```bash
+  python app/app.py
+  ```
 
 The app will be accessible at [http://localhost:5000](http://localhost:5000).
 
