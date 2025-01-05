@@ -92,6 +92,9 @@ button {
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 button:hover {
@@ -124,6 +127,12 @@ button:disabled {
     100% {
         transform: rotate(360deg);
     }
+}
+
+#arrow-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
 }
 
 /* Webkit (Chrome, Safari) Scrollbar */
