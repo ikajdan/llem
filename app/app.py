@@ -3,6 +3,9 @@ import logging
 from flask import Flask, jsonify, render_template, request
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 app = Flask(__name__)
 
 checkpoint = "/model"
@@ -10,9 +13,6 @@ device = "cpu"
 
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 model = AutoModelForCausalLM.from_pretrained(checkpoint).to(device)
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 
 @app.route("/")
